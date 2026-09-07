@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Privacy Policy — Tasteful</title>
+<meta name="description" content="How Tasteful handles your data: no accounts, on-device storage, and exactly what the backend receives and when.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap">
+<link rel="stylesheet" href="../styles.css">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="lockup" href="../index.html" aria-label="Latchkey Software home">
+      <svg width="34" height="34" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect x="1.25" y="1.25" width="37.5" height="37.5" rx="10.5" fill="none" stroke="#F2EFE9" stroke-width="2.5"/>
+        <path d="M11.5 13.2 L19.4 20 L11.5 26.8" stroke="#C8862F" stroke-width="3.2" fill="none"/>
+        <rect x="23.4" y="12.4" width="5.4" height="15.2" fill="#F2EFE9"/>
+      </svg>
+      <span class="lockup-text">
+        <span class="lockup-name">latchkey</span>
+        <span class="lockup-sub">Software</span>
+      </span>
+    </a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="../tasteful/">Tasteful</a>
+      <a href="../support/">Support</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<section>
+  <div class="wrap narrow">
+    <p class="eyebrow">Tasteful &middot; Privacy Policy</p>
+    <h1>How Tasteful handles your data</h1>
+    <p class="lede">Tasteful is a recipe manager built to keep as little as possible on our servers. This page explains, plainly, what happens to your information when you use the app.</p>
+    <p class="legal-meta">Effective September 6, 2026 &middot; Applies to Tasteful for iOS and iPadOS</p>
+  </div>
+</section>
+
+<section class="raised">
+  <div class="wrap narrow legal">
+
+    <h2><span class="num">01</span> Overview</h2>
+    <p>Tasteful lets you save recipes from around the web, organize a pantry and grocery list, plan meals for the week, and ask an AI assistant questions about any of it. The app has no user accounts and no login &mdash; there&rsquo;s nothing to sign up for and nothing tied to your identity.</p>
+    <p>Your recipes, pantry, grocery list, and meal plan live on your device and, if you enable it, sync privately across your own devices through your personal iCloud account. Tasteful&rsquo;s backend server never stores your saved collection &mdash; it only ever sees the specific piece of information needed to complete the request you just made (a URL to parse, a photo to scan, a question to answer), and then moves on.</p>
+
+    <h2><span class="num">02</span> What we collect</h2>
+    <p>Because there&rsquo;s no account system, Tasteful doesn&rsquo;t collect your name, email address, or any other identifying profile information. The categories below cover everything the app&rsquo;s backend ever receives, and only when you take the corresponding action:</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>You do this</th><th>We temporarily receive</th></tr></thead>
+        <tbody>
+          <tr><td>Save a recipe from a URL</td><td>The URL, and the page&rsquo;s public content while parsing it</td></tr>
+          <tr><td>Import a recipe from a photo</td><td>The photo, for the moment it takes to extract the recipe</td></tr>
+          <tr><td>Scan a handwritten list or receipt</td><td>The photo, for the moment it takes to extract the items</td></tr>
+          <tr><td>Ask the in-app assistant a question</td><td>Your question, the relevant recipe/pantry/grocery/meal-plan text, and recent chat history for that conversation</td></tr>
+          <tr><td>Search your saved recipes with natural language</td><td>Your search phrase and your saved recipes&rsquo; titles and ingredients</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>To keep the service available, our backend applies rate limits based on the IP address a request arrives from, and its server logs briefly record failed requests along with the recipe URL involved so we can fix broken imports. These logs aren&rsquo;t tied to any account or profile &mdash; there isn&rsquo;t one &mdash; and aren&rsquo;t used to build a picture of you or your usage.</p>
+    <p>None of this is linked to a device ID, advertising ID, or any other persistent identifier. Tasteful contains no advertising and no third-party analytics or tracking SDKs.</p>
+
+    <h2><span class="num">03</span> AI-assisted features</h2>
+    <p>Several features &mdash; recipe import from photos or difficult pages, the pantry, grocery and meal-plan chat assistants, natural-language recipe search, list and receipt scanning, and estimated nutrition &mdash; are powered by Anthropic&rsquo;s Claude API. When you use one of these, the relevant text or photo described above is sent to Anthropic for processing and a response is streamed back to the app.</p>
+    <h3>Estimated nutrition</h3>
+    <p>When a saved recipe doesn&rsquo;t already include nutrition information, Tasteful can estimate it from the ingredient list, title, and serving size. That text is sent to Anthropic for the estimate. Estimated values are approximations, not verified nutrition facts &mdash; the app marks them as estimated wherever they&rsquo;re shown, and they shouldn&rsquo;t be relied on for medical or strict dietary purposes.</p>
+    <p>Anthropic processes this information under its own privacy policy, available at <a href="https://www.anthropic.com/legal/privacy">anthropic.com/legal/privacy</a>. Tasteful&rsquo;s backend does not use this data to train any model, and does not retain it beyond completing your request.</p>
+
+    <h2><span class="num">04</span> iCloud sync</h2>
+    <p>If you&rsquo;re signed into iCloud, Tasteful stores your saved recipes, pantry, grocery list, and meal plan in your own private iCloud account using Apple&rsquo;s CloudKit, so they stay in sync across your devices. This data is encrypted and managed by Apple under Apple&rsquo;s own privacy policy &mdash; Tasteful&rsquo;s developer has no access to it. You can turn this off at any time in your device&rsquo;s iCloud settings, which keeps everything local to that one device instead.</p>
+
+    <h2><span class="num">05</span> Subscriptions</h2>
+    <p>Tasteful offers an optional paid subscription for AI-assisted features, sold and processed entirely through Apple&rsquo;s App Store using StoreKit. Tasteful never sees or handles your payment details &mdash; Apple manages billing, receipts, and renewals directly, under Apple&rsquo;s own privacy policy.</p>
+
+    <h2><span class="num">06</span> Storage &amp; retention</h2>
+    <p>Tasteful&rsquo;s backend keeps a short-lived cache of parsed recipe results, keyed only by the source URL, so that re-opening a popular or previously-shared link doesn&rsquo;t require re-fetching and re-parsing it. This cache is not linked to you or your device, expires automatically after a few hours, and is capped in size. Photos and chat messages are processed in memory and are not written to any database &mdash; once a response is streamed back to your device, the backend retains nothing from that request.</p>
+    <p>Anything you see in the app itself &mdash; your recipes, pantry, grocery list, meal plan, and favorites &mdash; is stored only on your device and, optionally, your own iCloud account, as described above.</p>
+
+    <h2><span class="num">07</span> Who we share with</h2>
+    <p>We share information only with the service providers necessary to run the features you use, and only for that purpose:</p>
+    <ul>
+      <li><strong>Anthropic</strong> &mdash; processes text and photos for AI-assisted features, as described above.</li>
+      <li><strong>Apple</strong> &mdash; provides iCloud sync (CloudKit) and subscription billing (StoreKit).</li>
+      <li><strong>Railway</strong> &mdash; hosts Tasteful&rsquo;s backend server infrastructure.</li>
+      <li><strong>ZenRows</strong> &mdash; when a recipe site blocks our direct request, we retry fetching that public page through ZenRows&rsquo; proxy service. Only the recipe URL is passed along; nothing about you or your device is included.</li>
+    </ul>
+    <p>We do not sell your data, and we do not share it with anyone for advertising or marketing purposes. We may disclose information if required to by law.</p>
+
+    <h2><span class="num">08</span> Your choices</h2>
+    <ul>
+      <li>Delete any recipe, pantry item, grocery item, or meal plan entry at any time directly in the app &mdash; this removes it from your device and your iCloud account.</li>
+      <li>Turn off iCloud sync in your device settings to keep your data local to one device only.</li>
+      <li>Simply don&rsquo;t use the AI-assisted features if you&rsquo;d rather nothing ever leaves your device for processing &mdash; the rest of the app works fully without them.</li>
+      <li>Cancel your subscription at any time through your Apple ID&rsquo;s subscription settings.</li>
+    </ul>
+
+    <h2><span class="num">09</span> Children&rsquo;s privacy</h2>
+    <p>Tasteful is not directed at children under 13, and we do not knowingly collect information from anyone in that age group. Since the app has no accounts, there is no age-gated content to access.</p>
+
+    <h2><span class="num">10</span> Changes to this policy</h2>
+    <p>If this policy changes in a meaningful way, we&rsquo;ll update the effective date at the top of this page. Continuing to use Tasteful after a change means you accept the updated policy.</p>
+
+    <h2><span class="num">11</span> Contact</h2>
+    <p>Tasteful is made by Latchkey Software LLC, a limited liability company registered in North Carolina, which is the data controller for the purposes of this policy. Questions about this policy or how Tasteful handles information can be sent to <a href="mailto:support@latchkeysoftware.com">support@latchkeysoftware.com</a>.</p>
+
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <span class="lockup-name" style="font-size:1rem">latchkey</span>
+      <p class="colophon">© 2026 Latchkey Software LLC. Registered in North Carolina.<br>support@latchkeysoftware.com</p>
+    </div>
+    <nav class="footer-links" aria-label="Footer">
+      <a href="../tasteful/">Tasteful</a>
+      <a href="../support/">Support</a>
+      <a href="../privacy/">Privacy</a>
+      <a href="../terms/">Terms</a>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>
